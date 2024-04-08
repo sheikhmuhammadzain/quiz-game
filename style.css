@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root{
+    --hue-neutral:200;
+    --hue-wrong:0;
+    --hue-correct:145;
+}
+body{
+    --hue:var(--hue-neutral);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+body.correct {
+    --hue: var(--hue-correct);
+}
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+.container{
+    width: 700px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0  9px 1px ;
+}
+.container h1 {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap: 10px;
+    margin-block: 20px;
+}
+.btn{
+    --hue:var(--hue-neutral);
+    border: 1px solid hsl(var(--hue) 100%, 30%);
+    background-color: hsl(var(--hue) 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline:none;
+    color: white;
+    cursor: pointer;
+}
+.btn:hover{
+    border-color: black;
+}
+.btn.correct{
+    --hue:var(--hue-correct);
+    color: black;
+}
+.btn.wrong{
+    --hue:var(--hue-wrong);
+}
+.start-btn,.next-btn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hide{
+display: none;
+}
